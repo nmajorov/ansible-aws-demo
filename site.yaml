@@ -1,0 +1,9 @@
+---
+- name: "deploy centos9 to aws"
+  hosts: "localhost"
+  gather_facts: false
+  connection: local
+  become: false
+  vars:
+  roles:
+    - { role: ec2_instance }
