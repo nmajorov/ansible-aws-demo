@@ -18,13 +18,13 @@
 
 - name: "Create a new instance"
   amazon.aws.ec2_instance:
-    name: "public-compute-instance"
+    name: "{{ ec2_instance_test_name  }}"
     security_group: default
     vpc_subnet_id: "{{ vpc_subnet_id }}"
     network:
       assign_public_ip: true
     image_id: '{{ centos9_ami }}'
     key_name: '{{ aws_keypar }}'
-    instance_type: t2.medium
+    instance_type: "{{ec2_instance_type}}"
     tags:
       Environment: Testing
