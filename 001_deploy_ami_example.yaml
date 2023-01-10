@@ -7,5 +7,8 @@
   vars:
     ec2_instance_test_name: minimal
     vpc_subnet_id: "subnet-05bb445fa8e383722"
+  
+  environment:
+    AWS_REGION: "eu-west-2"
   roles:
     - { role: ec2_instance }

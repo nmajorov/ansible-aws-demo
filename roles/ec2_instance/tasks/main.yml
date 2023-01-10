@@ -1,6 +1,7 @@
 ---
 # code: language=ansible
 
+
 - name: "Call aws_az_info"
   amazon.aws.aws_az_info:
   register: result_az_info
