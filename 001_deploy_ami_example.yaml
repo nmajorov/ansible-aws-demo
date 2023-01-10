@@ -5,5 +5,7 @@
   connection: local
   become: false
   vars:
+    ec2_instance_test_name: minimal
+    
   roles:
     - { role: ec2_instance }

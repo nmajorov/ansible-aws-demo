@@ -1,7 +1,0 @@
----
-- name: "deploy centos9 ami to aws"
-  hosts: "localhost"
-  gather_facts: false
-  connection: local
-  become: false
-  
