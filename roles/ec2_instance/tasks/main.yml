@@ -1,4 +1,5 @@
 ---
+# code: language=ansible
 
 - name: "Call aws_az_info"
   amazon.aws.aws_az_info:
@@ -8,8 +9,21 @@
   amazon.aws.aws_caller_info:
   register: result_account_info
 
-- name: "Display aws info "
+- name: "Display aws info"
   ansible.builtin.debug:
     msg:
-      - "AWS INFO: {{result_az_info }}"
+      - "AWS INFO: {{ result_az_info }}"
       - "AWS ACCOUNT INFO: {{ result_account_info }}"
+
+- name: "Create a new instance"
+  amazon.aws.ec2_instance:
+    name: "public-compute-instance"
+    security_group: default
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    network:
+      assign_public_ip: true
+    image_id: '{{ centos9_ami }}'
+    key_name: '{{ aws_keypar }}'
+    instance_type: t2.medium
+    tags:
+      Environment: Testing
