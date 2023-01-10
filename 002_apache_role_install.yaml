@@ -1,6 +1,10 @@
 ---
 - name: Ensure Apache installation
   hosts: web
-
+  become: true
   roles:
     - role_apache
+  vars:
+    first_line: "Hello"
+    second_line: "AWS"
+  
