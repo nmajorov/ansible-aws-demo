@@ -3,6 +3,8 @@
 My Ansible playbooks  for AAP Ansible Automation Platform  demo
 
 
-![Alt text](001_app.png?raw=true "Template to create ")
+![Template](001_app.png?raw=true "Template to create ")
+
+![Execution Env](ansible_execution_enviroment.png?raw=true "Execution environment configuration ")
 
 s
