@@ -7,6 +7,7 @@
   vars:
     ec2_instance_test_name: minimal
     vpc_subnet_id: "subnet-05bb445fa8e383722"
+    centos9_ami: "ami-0d55375e7a00f3332"
   
   environment:
     AWS_REGION: "eu-west-2"
