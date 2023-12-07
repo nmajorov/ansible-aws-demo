@@ -1,8 +1,8 @@
-# Ansible AWS demo
+# Ansible APP  AWS demo
 
 My Ansible playbooks  for AAP Ansible Automation Platform  demo
 
 
-install python dependencies for aws ansible collection:
+![Alt text](001_app.png?raw=true "Template to create ")
 
-      pip install boto3 botocore    
+s
